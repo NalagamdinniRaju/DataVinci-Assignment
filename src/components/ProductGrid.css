@@ -1,0 +1,52 @@
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* space between images */
+}
+
+/* Each image container */
+.grid-item {
+  flex: none;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px; /* optional, for nice corners */
+}
+
+/* Row 1: Two images side by side */
+.item-1,
+.item-2 {
+  width: calc(50% - 5px);
+  height: 220px;
+}
+
+/* Row 2: One large image spanning full width */
+.item-3 {
+  width: 100%;
+  height: 300px;
+}
+
+/* Row 3: Two images side by side */
+.item-4,
+.item-5 {
+  width: calc(50% - 5px);
+  height: 220px;
+}
+
+/* Row 4: Two images side by side */
+.item-6,
+.item-7 {
+  width: calc(50% - 5px);
+  height: 220px;
+}
+
+/* Mobile Responsive - Hide ProductGrid on mobile devices */
+@media (max-width: 768px) {
+  .product-grid {
+    display: none !important;
+  }
+}
